@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.FXMLController">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.prova.FXMLController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="73.0" prefWidth="898.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+              <Label fx:id="labelAlien" minHeight="16" minWidth="69" text="Alien Text">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtToTranslate" />
+              <Button fx:id="btnTranslate" onAction="#handleButtonAction" prefHeight="15.0" prefWidth="76.0" text="Traduci" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </center>
    <top>
-      <Label text="Alien Translator" BorderPane.alignment="CENTER">
+      <Label fx:id="labelTitolo" prefHeight="21.0" prefWidth="162.0" text="Lab 2 - Alien Translator" BorderPane.alignment="CENTER">
          <font>
-            <Font name="Courier New Bold" size="39.0" />
+            <Font size="15.0" />
          </font>
       </Label>
    </top>
+   <bottom>
+      <TextArea fx:id="txtTradotto" prefHeight="280.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </bottom>
 </BorderPane>
