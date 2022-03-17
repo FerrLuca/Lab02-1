@@ -1,4 +1,4 @@
-package it.polito.tdp.alien;
+package it.polito.tdp.prova;
 
 public class Main {
 	public static void main(String[] args) {
